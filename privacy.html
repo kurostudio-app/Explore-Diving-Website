@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私權政策 - Explore Diving</title>
+    <style>
+        :root {
+            --primary: #00ADB5;
+            --dark: #0B1221;
+            --text: #333;
+            --bg: #f9f9f9;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: var(--bg);
+            color: var(--text);
+        }
+        h1 {
+            color: var(--dark);
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 15px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            font-size: 1.4rem;
+        }
+        h3 {
+            color: #555;
+            margin-top: 25px;
+            font-size: 1.1rem;
+        }
+        p, ul {
+            margin-bottom: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        code {
+            background: #eee;
+            padding: 2px 5px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background-color: var(--dark);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: opacity 0.3s;
+        }
+        .back-btn:hover {
+            opacity: 0.8;
+            text-decoration: none;
+        }
+        .divider {
+            border-top: 1px dashed #ccc;
+            margin: 50px 0;
+        }
+        .english-section {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="back-btn">← 返回首頁 (Back to Home)</a>
+
+    <h1>Explore Diving — 隱私權政策（Privacy Policy）</h1>
+    <p><strong>最後更新日期：2025-12</strong></p>
+
+    <p>Explore Diving（以下稱「本應用程式」）是一款離線優先（Offline First）的潛水輔助工具。本應用程式不蒐集任何個人資料，也不會將您的使用行為上傳至伺服器。本政策將說明資料處理方式、第三方服務以及資料刪除方法。</p>
+
+    <h2>1. 簡介（Introduction）</h2>
+    <p>Explore Diving 採用無伺服器架構（Serverless），無帳號系統、不追蹤、不蒐集個資。<br>
+    所有使用者偏好資料皆儲存在您的裝置本地端。</p>
+
+    <h2>2. 資料收集（Information Collection）</h2>
+
+    <h3>2.1 個人資料（Personal Data）</h3>
+    <p>本應用程式不會要求或收集以下資訊：</p>
+    <ul>
+        <li>姓名、電話、電子郵件</li>
+        <li>裝置識別碼（如 UUID）</li>
+        <li>登入資訊</li>
+        <li>個人可識別資訊（Personal Identifiable Information, PII）</li>
+    </ul>
+
+    <h3>2.2 位置資訊（Location Information）</h3>
+    <p>本應用程式 <strong>不會要求存取您的 GPS 位置</strong>。<br>
+    所有潛點位置皆來自內建離線資料庫，非使用者所在位置。</p>
+
+    <h3>2.3 本地儲存（Local Storage）</h3>
+    <p>本應用程式會在您的裝置上儲存：</p>
+    <ul>
+        <li>收藏（Favorite）</li>
+        <li>已去過（Visited）</li>
+        <li>想去（Wishlist）</li>
+        <li>個人設定偏好</li>
+    </ul>
+    <p>這些資料皆：</p>
+    <ul>
+        <li>儲存在本地 SQLite</li>
+        <li>不會傳送至外部伺服器</li>
+        <li>移除應用程式即會永久刪除</li>
+    </ul>
+
+    <h2>3. 第三方服務（Third-Party Services）</h2>
+    <p>部分功能需與第三方服務互動。這些服務可能依自身政策記錄 IP 位址。</p>
+
+    <h3>3.1 OpenStreetMap / CartoDB（地圖服務）</h3>
+    <p>用於顯示地圖圖資。</p>
+    <ul>
+        <li>無個資蒐集</li>
+        <li>伺服器可能記錄標準 HTTP 訪問資訊（如 IP）</li>
+        <li><a href="https://wiki.openstreetmap.org/wiki/Privacy_Policy" target="_blank">OpenStreetMap Privacy Policy</a></li>
+        <li><a href="https://carto.com/privacy/" target="_blank">Carto Privacy Policy</a></li>
+    </ul>
+
+    <h3>3.2 Open-Meteo 天氣資料（Weather Data）</h3>
+    <p>本應用程式使用 Open-Meteo API 提供即時天氣與海況資訊。<br>
+    當您查看潛點頁面時，裝置會傳送：</p>
+    <ul>
+        <li>該潛點的座標（非您的個人位置）</li>
+        <li>一般 HTTP 訪問資訊（如 IP）</li>
+    </ul>
+    <p>伺服器可能依標準運作記錄 IP，這是正常伺服器行為。<br>
+    <a href="https://open-meteo.com/en/terms" target="_blank">Open-Meteo 使用條款</a></p>
+
+    <h3>3.3 外部導航（External Navigation）</h3>
+    <p>當您使用導航功能時，本應用程式會開啟外部 App（例如 Google Maps、Apple Maps）。<br>
+    本應用程式不會傳送任何個人資訊至這些服務。</p>
+
+    <h2>4. 廣告（Advertising）</h2>
+    <p>本應用程式：</p>
+    <ul>
+        <li>不含廣告</li>
+        <li>不使用追蹤程式（Tracker）</li>
+        <li>不整合任何第三方廣告 SDK</li>
+    </ul>
+
+    <h2>5. 兒童隱私（Children’s Privacy）</h2>
+    <p>本應用程式不蒐集任何個資，因此無需額外兒童專用處理措施。</p>
+
+    <h2>6. 政策更新（Changes to This Policy）</h2>
+    <p>本政策可能因功能調整或法規要求而更新，更新後將公佈於本頁。</p>
+
+    <h2>7. 聯絡我們（Contact Us）</h2>
+    <p>若您對本隱私權政策有疑問，請透過 Email 聯繫：</p>
+    <p>📧 Email：<strong>kuro.studio.app@gmail.com</strong></p>
+    <p>（App Store 與 Google Play 審核皆要求提供有效聯絡方式）</p>
+
+    <h2>8. 資料刪除（Data Deletion）</h2>
+    <p>本應用程式所有資料皆存在本地端。若您希望刪除全部資料：</p>
+    <ol>
+        <li>從您的裝置中解除安裝本應用程式</li>
+        <li>所有收藏、偏好設定與本地資料將永久刪除</li>
+    </ol>
+
+    <div class="divider"></div>
+
+    <div class="english-section">
+        <h1>Explore Diving — Privacy Policy (English Version)</h1>
+        <p><em>Last updated: 2025-12</em></p>
+
+        <p>Explore Diving (“the App”) is designed as an offline-first diving tool. The App does not collect personal data, does not track users, and does not send any data to a backend server. This Privacy Policy explains how data is handled, what third-party services are used, and how users can delete their data.</p>
+
+        <h2>1. Introduction</h2>
+        <p>Explore Diving uses a serverless architecture.<br>
+        No accounts, no tracking, and no personal data collection.<br>
+        All user preferences are stored locally on your device.</p>
+
+        <h2>2. Information Collection</h2>
+
+        <h3>2.1 Personal Data</h3>
+        <p>The App does <strong>not</strong> request or collect:</p>
+        <ul>
+            <li>Name, phone number, or email</li>
+            <li>Device identifiers</li>
+            <li>Login information</li>
+            <li>Any personally identifiable information (PII)</li>
+        </ul>
+
+        <h3>2.2 Location Information</h3>
+        <p>The App does <strong>not</strong> access or use your GPS location.<br>
+        All dive site coordinates come from the built-in offline database.</p>
+
+        <h3>2.3 Local Storage</h3>
+        <p>The App stores the following data locally:</p>
+        <ul>
+            <li>Favorites</li>
+            <li>Visited sites</li>
+            <li>Wishlist items</li>
+            <li>User preferences</li>
+        </ul>
+        <p>These data:</p>
+        <ul>
+            <li>Are stored locally in SQLite</li>
+            <li>Are never transmitted to external servers</li>
+            <li>Can be fully removed by uninstalling the App</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>Some features rely on third-party services. These services may record your IP address as part of normal server operations.</p>
+
+        <h3>3.1 OpenStreetMap / CartoDB (Maps)</h3>
+        <p>Used for map rendering.<br>
+        - No personal data collected<br>
+        - Server logs (e.g., IP) may be recorded automatically<br>
+        - <a href="https://wiki.openstreetmap.org/wiki/Privacy_Policy" target="_blank">OpenStreetMap Privacy Policy</a><br>
+        - <a href="https://carto.com/privacy/" target="_blank">Carto Privacy Policy</a></p>
+
+        <h3>3.2 Weather Data (Open-Meteo)</h3>
+        <p>We use the Open-Meteo API to display real-time weather and marine conditions.<br>
+        When viewing a dive site, your device sends:</p>
+        <ul>
+            <li>The dive site’s coordinates (not your personal location)</li>
+            <li>Standard request information such as IP address</li>
+        </ul>
+        <p><a href="https://open-meteo.com/en/terms" target="_blank">Open-Meteo Privacy Terms</a></p>
+
+        <h3>3.3 External Navigation</h3>
+        <p>When using navigation links, the App may open third-party applications such as Google Maps or Apple Maps.<br>
+        No personal data is transmitted by the App.</p>
+
+        <h2>4. Advertising</h2>
+        <p>The App:</p>
+        <ul>
+            <li>Contains no ads</li>
+            <li>Uses no tracking technologies</li>
+            <li>Does not integrate advertising SDKs</li>
+        </ul>
+
+        <h2>5. Children’s Privacy</h2>
+        <p>Since the App collects no data, no special measures for children are required.</p>
+
+        <h2>6. Changes to This Policy</h2>
+        <p>This policy may be updated when required by new features or legal requirements. Updates will be posted on this page.</p>
+
+        <h2>7. Contact Us</h2>
+        <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+        <p>📧 Email: <strong>kuro.studio.app@gmail.com</strong></p>
+
+        <h2>8. Data Deletion</h2>
+        <p>All App data exists only on your device.<br>
+        To delete all data:</p>
+        <ol>
+            <li>Uninstall the App</li>
+            <li>All local data (favorites, preferences) will be permanently removed</li>
+        </ol>
+    </div>
+
+</body>
+</html>

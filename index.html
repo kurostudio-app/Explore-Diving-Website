@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Diving - 探索潛水地圖 | 離線優先的潛水嚮導</title>
+    <meta name="description" content="專為潛水員打造的離線地圖 App。內建小琉球、綠島、蘭嶼等潛點資訊，整合即時海況與 AED 急救資源。新手友善的潛旅規劃神器。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0B1221',
+                            light: '#1A2233',
+                            teal: '#00ADB5',
+                            pink: '#FF2E63',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* 雙手機交疊動畫效果 */
+        .phone-float-1 { animation: float1 6s ease-in-out infinite; }
+        .phone-float-2 { animation: float2 7s ease-in-out infinite; }
+        
+        @keyframes float1 {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes float2 {
+            0%, 100% { transform: translateY(0px) rotate(-6deg) scale(0.9); }
+            50% { transform: translateY(-15px) rotate(-6deg) scale(0.9); }
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 font-sans antialiased overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-3">
+                    <span class="text-xl font-bold tracking-wider text-white">Explore Diving</span>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#download" class="bg-brand-teal hover:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-lg shadow-brand-teal/20">
+                        下載 App
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-10 md:pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+            
+            <div class="md:w-5/12 mb-16 md:mb-0 z-20">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-light text-brand-teal text-sm font-semibold mb-4 border border-gray-700">
+                    <i class="fa-solid fa-check mr-2"></i>新手潛水規劃首選、緊急救援小幫手
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    沒訊號也能<br>
+                    <span class="text-brand-teal">安心探索</span>
+                </h1>
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                    想去小琉球看海龜？還是去綠島探訪鋼鐵礁？<br>
+                    <strong>Explore Diving</strong> 收錄全台五大潛區熱門潛點，整合離線地圖與 SOS 急救資訊。不知道去哪潛水？這就是你的最佳口袋嚮導。
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4" id="download">
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="flex items-center bg-white text-black px-6 py-3 rounded-xl hover:bg-gray-200 transition duration-300 w-fit transform hover:scale-105 shadow-xl">
+                        <i class="fa-brands fa-apple text-3xl mr-3"></i>
+                        <div class="text-left">
+                            <div class="text-xs uppercase font-bold tracking-wider">Download on the</div>
+                            <div class="text-xl font-bold leading-none">App Store</div>
+                        </div>
+                    </a>
+                    
+                    <div class="flex items-center px-4 py-3 rounded-xl border border-gray-700 text-gray-500 bg-brand-light/50">
+                        <i class="fa-brands fa-android text-2xl mr-3"></i>
+                        <div class="text-left">
+                            <div class="text-xs font-bold">Android 版本</div>
+                            <div class="text-sm">開發評估中</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:w-7/12 relative h-[600px] w-full flex justify-center md:justify-end items-center perspective-1000">
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-teal/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+                <div class="absolute left-0 md:left-20 top-10 z-10 transform -rotate-6 scale-90 opacity-60 hover:opacity-100 transition duration-500 phone-float-2 hidden sm:block">
+                    <div class="relative border-gray-800 bg-gray-800 border-[12px] rounded-[2.5rem] h-[550px] w-[280px] shadow-2xl">
+                        <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[15px] top-[72px] rounded-l-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[15px] top-[124px] rounded-l-lg"></div>
+                        <div class="rounded-[2rem] overflow-hidden h-full w-full bg-black">
+                            <img src="images/hero-phone.png" class="w-full h-full object-cover opacity-80" alt="App Map View">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative z-20 phone-float-1 transform scale-100">
+                    <div class="relative border-gray-800 bg-gray-800 border-[14px] rounded-[2.5rem] h-[600px] w-[300px] shadow-2xl shadow-black/50">
+                        <div class="h-[32px] w-[3px] bg-gray-800 absolute -left-[17px] top-[72px] rounded-l-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[124px] rounded-l-lg"></div>
+                        <div class="h-[46px] w-[3px] bg-gray-800 absolute -left-[17px] top-[178px] rounded-l-lg"></div>
+                        <div class="h-[64px] w-[3px] bg-gray-800 absolute -right-[17px] top-[142px] rounded-r-lg"></div>
+                        <div class="rounded-[2rem] overflow-hidden h-[572px] w-[272px] bg-black">
+                            <img src="images/hero-phone2.png" class="w-full h-full object-cover" alt="App Main View">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-light/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">六大核心功能</h2>
+                <p class="text-gray-400">解決潛水員最真實的痛點</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-map-location-dot text-blue-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">完整離線資料庫</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">內建 30+ 個基本熱門潛點資訊，包含難度分級、地形與特色。無需網路也能查看地圖，離島旅遊不斷線。</p>
+                </div>
+
+                <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-wind text-yellow-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">即時海況氣象</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">即時獲取潛點的「浪高」、「風速」與「氣溫」。出發前掌握第一手環境狀況，潛得更安全。<br><span class="text-xs text-gray-500">(此功能需微量網路)</span></p>
+                </div>
+
+                <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 ring-1 ring-brand-pink/30 group">
+                    <div class="w-12 h-12 bg-brand-pink/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-heart-pulse text-brand-pink text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-brand-pink">SOS 緊急醫療資源</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">身為救援潛水員，深知安全是回家的路。內建高壓氧中心、海巡電話及 AED 位置圖。緊急時刻一鍵導航撥打。</p>
+                </div>
+
+                <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-bookmark text-purple-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">個人化潛水清單</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">地圖圖釘會根據「收藏（粉紅）」、「想去（紫）」、「去過（綠）」變色，輕鬆管理您的潛水足跡。</p>
+                </div>
+
+                <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-filter text-green-400 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">智慧標籤篩選</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">想找 #新手友善 的岸潛？還是挑戰 #強流 船潛？透過篩選器快速找到適合您的潛點。</p>
+                </div>
+
+                <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
+                    <div class="w-12 h-12 bg-brand-teal/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-location-arrow text-brand-teal text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">一鍵導航</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm">支援連動地圖 App，直接帶您了解潛點所在位置！緊急時刻一鍵導航至 AED 所在位置。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 mb-10 text-center">
+            <h2 class="text-3xl font-bold">App 介面預覽</h2>
+            <p class="mt-2 text-gray-400">深色模式介面，保護夜潛後的眼睛</p>
+        </div>
+        
+        <div class="flex overflow-x-auto hide-scrollbar gap-6 px-4 pb-8 justify-start md:justify-center">
+            <img src="images/screen1.png" class="h-[500px] w-auto rounded-[2rem] border-4 border-gray-800 shadow-xl flex-shrink-0" alt="Screen 1">
+            <img src="images/screen2.png" class="h-[500px] w-auto rounded-[2rem] border-4 border-gray-800 shadow-xl flex-shrink-0" alt="Screen 2">
+            <img src="images/screen3.png" class="h-[500px] w-auto rounded-[2rem] border-4 border-gray-800 shadow-xl flex-shrink-0" alt="Screen 3">
+            <img src="images/screen4.png" class="h-[500px] w-auto rounded-[2rem] border-4 border-gray-800 shadow-xl flex-shrink-0" alt="Screen 4">
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-light border-y border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <div class="mb-8 relative inline-block">
+                <div class="absolute inset-0 bg-brand-teal blur opacity-30 rounded-full"></div>
+                <img src="images/authorphoto.png" class="relative w-32 h-32 rounded-full mx-auto border-4 border-brand-teal/50 object-cover shadow-2xl" alt="Author Kuro">
+            </div>
+
+            <h2 class="text-3xl font-bold mb-6">來自救援潛水員的承諾</h2>
+            <div class="space-y-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto text-justify md:text-center">
+                <p>
+                    我是 Kuro，是個業餘的獨立開發者，也是一名熱愛潛水的<strong>資訊安全工作者</strong>。
+                </p>
+                <p>
+                    有時候會在海邊發現手機沒訊號，或是不知道有哪些潛點好玩、現在海況如何的尷尬狀況，因此我開發了這款 APP。 身為<strong>救援潛水員</strong>，我特別整合了 AED 與高壓氧中心的資訊，因為「安全是回家的路」。
+                </p>
+                <p>
+                    目前所有潛點資訊皆由我<strong>人工慢慢建置</strong>，開發的費用成本由我個人負擔，雖然進度較慢，但每一筆都希望能幫助到大家，幫助台灣潛水社群更加透明，發展更好。期待大家推廣與給我任何有助於 APP 改進的友善回饋，有任何合作建議也歡迎洽詢！
+                </p>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-700">
+                <p class="text-sm font-bold text-brand-teal uppercase tracking-widest mb-6">Professional Certifications</p>
+                <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">PADI - Rescue Diver</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">SSI - React Right Specialty</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">IANTD - Deep Diver</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">SDI - Advanced Scuba Diver</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">ADS - OpenWater Diver</span>
+                    <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">ADS - EAN STANDARD DIVER</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full text-xs md:text-sm text-gray-400 border border-gray-600">體適能健身C級指導員</span>
+                </div>
+            </div>
+            
+            <div class="mt-12">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe5ymY_Lm1XcvrTfFVkq0hR_HbitJ_tk1Lwu4hs5gh-zjqwg/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-500 text-white px-8 py-3 rounded-full transition duration-300 shadow-lg shadow-brand-teal/20 font-medium transform hover:-translate-y-1">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    聯絡作者 / 意見回饋 / 合作邀請
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold mb-2">未來展望</h2>
+                <p class="text-gray-500">持續進化，打造最完整的潛水生態</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-map-marked-alt text-brand-teal mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">台灣潛旅規劃</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-briefcase-medical text-brand-pink mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">急救指引</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-book-open text-blue-400 mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">潛水日誌記錄</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-globe text-purple-400 mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">國外潛點資訊</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-mobile-screen-button text-gray-300 mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">版面優化</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-rotate text-green-400 mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">裝置同步</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-store text-yellow-400 mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">潛店推薦</h3>
+                </div>
+                <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
+                    <i class="fa-solid fa-user-graduate text-orange-400 mb-3 text-2xl"></i>
+                    <h3 class="text-sm font-bold text-gray-300">教練推薦</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-500 text-sm mb-4 md:mb-0">
+                &copy; 2025 Explore Diving. All rights reserved.
+            </div>
+            <div class="flex gap-6 text-sm">
+                <a href="privacy.html" class="text-gray-400 hover:text-white">隱私權政策</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
