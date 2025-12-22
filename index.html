@@ -57,10 +57,16 @@
                 <div class="flex items-center gap-3">
                     <span class="text-xl font-bold tracking-wider text-white">Explore Diving</span>
                 </div>
-                <div class="hidden md:block">
-                    <a href="https://apps.apple.com/tw/app/explore-diving-%E6%8E%A2%E7%B4%A2%E6%BD%9B%E6%B0%B4/id6756210232" target="_blank" rel="noopener noreferrer" class="bg-brand-teal hover:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-lg shadow-brand-teal/20">
-                        下載 App
-                    </a>
+                <div class="flex items-center gap-4">
+                    <button id="lang-toggle" onclick="toggleLanguage()" class="text-gray-300 hover:text-white border border-gray-600 px-3 py-1 rounded-full text-xs font-medium transition duration-300">
+                        <i class="fa-solid fa-globe mr-1"></i> <span>EN</span>
+                    </button>
+
+                    <div class="hidden md:block">
+                        <a href="https://apps.apple.com/tw/app/explore-diving-%E6%8E%A2%E7%B4%A2%E6%BD%9B%E6%B0%B4/id6756210232" target="_blank" rel="noopener noreferrer" class="bg-brand-teal hover:bg-teal-500 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 shadow-lg shadow-brand-teal/20" data-i18n="nav_download">
+                            下載 App
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -71,13 +77,13 @@
             
             <div class="md:w-5/12 mb-16 md:mb-0 z-20">
                 <span class="inline-block py-1 px-3 rounded-full bg-brand-light text-brand-teal text-sm font-semibold mb-4 border border-gray-700">
-                    <i class="fa-solid fa-check mr-2"></i>新手潛水規劃首選、緊急救援小幫手
+                    <i class="fa-solid fa-check mr-2"></i><span data-i18n="hero_badge">新手潛水規劃首選、緊急救援小幫手</span>
                 </span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                    沒訊號也能<br>
-                    <span class="text-brand-teal">安心探索</span>
+                    <span data-i18n="hero_title_1">沒訊號也能</span><br>
+                    <span class="text-brand-teal" data-i18n="hero_title_2">安心探索</span>
                 </h1>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                <p class="text-gray-400 text-lg mb-8 leading-relaxed" data-i18n="hero_desc">
                     想去小琉球看海龜？還是去綠島探訪鋼鐵礁？<br>
                     <strong>Explore Diving</strong> 收錄全台五大潛區熱門潛點，整合離線地圖與 SOS 急救資訊。不知道去哪潛水？這就是你的最佳口袋嚮導。
                 </p>
@@ -94,8 +100,8 @@
                     <div class="flex items-center px-4 py-3 rounded-xl border border-gray-700 text-gray-500 bg-brand-light/50">
                         <i class="fa-brands fa-android text-2xl mr-3"></i>
                         <div class="text-left">
-                            <div class="text-xs font-bold">Android 版本</div>
-                            <div class="text-sm">開發評估中</div>
+                            <div class="text-xs font-bold" data-i18n="android_title">Android 版本</div>
+                            <div class="text-sm" data-i18n="android_status">開發評估中</div>
                         </div>
                     </div>
                 </div>
@@ -132,8 +138,8 @@
     <section class="py-20 bg-brand-light/30">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">六大核心功能</h2>
-                <p class="text-gray-400">解決潛水員最真實的痛點</p>
+                <h2 class="text-3xl font-bold mb-4" data-i18n="feat_title">六大核心功能</h2>
+                <p class="text-gray-400" data-i18n="feat_subtitle">解決潛水員最真實的痛點</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -141,48 +147,48 @@
                     <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-map-location-dot text-blue-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">完整離線資料庫</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">內建 30+ 個基本熱門潛點資訊，包含難度分級、地形與特色。無需網路也能查看地圖，離島旅遊不斷線。</p>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_1_title">完整離線資料庫</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="feat_1_desc">內建 30+ 個基本熱門潛點資訊，包含難度分級、地形與特色。無需網路也能查看地圖，離島旅遊不斷線。</p>
                 </div>
 
                 <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
                     <div class="w-12 h-12 bg-yellow-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-wind text-yellow-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">即時海況氣象</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">即時獲取潛點的「浪高」、「風速」與「氣溫」。出發前掌握第一手環境狀況，潛得更安全。<br><span class="text-xs text-gray-500">(此功能需微量網路)</span></p>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_2_title">即時海況氣象</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="feat_2_desc">即時獲取潛點的「浪高」、「風速」與「氣溫」。出發前掌握第一手環境狀況，潛得更安全。<br><span class="text-xs text-gray-500">(此功能需微量網路)</span></p>
                 </div>
 
                 <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 ring-1 ring-brand-pink/30 group">
                     <div class="w-12 h-12 bg-brand-pink/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-heart-pulse text-brand-pink text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-brand-pink">SOS 緊急醫療資源</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">身為救援潛水員，深知安全是回家的路。內建高壓氧中心、海巡電話及 AED 位置圖。緊急時刻一鍵導航撥打。</p>
+                    <h3 class="text-xl font-bold mb-3 text-brand-pink" data-i18n="feat_3_title">SOS 緊急醫療資源</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="feat_3_desc">身為救援潛水員，深知安全是回家的路。內建高壓氧中心、海巡電話及 AED 位置圖。緊急時刻一鍵導航撥打。</p>
                 </div>
 
                 <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
                     <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-bookmark text-purple-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">個人化潛水清單</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">地圖圖釘會根據「收藏（粉紅）」、「想去（紫）」、「去過（綠）」變色，輕鬆管理您的潛水足跡。</p>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_4_title">個人化潛水清單</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="feat_4_desc">地圖圖釘會根據「收藏（粉紅）」、「想去（紫）」、「去過（綠）」變色，輕鬆管理您的潛水足跡。</p>
                 </div>
 
                 <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
                     <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-filter text-green-400 text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">智慧標籤篩選</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">想找 #新手友善 的岸潛？還是挑戰 #強流 船潛？透過篩選器快速找到適合您的潛點。</p>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_5_title">智慧標籤篩選</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="feat_5_desc">想找 #新手友善 的岸潛？還是挑戰 #強流 船潛？透過篩選器快速找到適合您的潛點。</p>
                 </div>
 
                 <div class="bg-brand-light p-8 rounded-2xl hover:bg-gray-800 transition duration-300 border border-gray-800 group">
                     <div class="w-12 h-12 bg-brand-teal/20 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fa-solid fa-location-arrow text-brand-teal text-xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">一鍵導航</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">支援連動地圖 App，直接帶您了解潛點所在位置！緊急時刻一鍵導航至 AED 所在位置。</p>
+                    <h3 class="text-xl font-bold mb-3" data-i18n="feat_6_title">一鍵導航</h3>
+                    <p class="text-gray-400 leading-relaxed text-sm" data-i18n="feat_6_desc">支援連動地圖 App，直接帶您了解潛點所在位置！緊急時刻一鍵導航至 AED 所在位置。</p>
                 </div>
             </div>
         </div>
@@ -190,8 +196,8 @@
 
     <section class="py-20 overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 mb-10 text-center">
-            <h2 class="text-3xl font-bold">App 介面預覽</h2>
-            <p class="mt-2 text-gray-400">深色模式介面，保護夜潛後的眼睛</p>
+            <h2 class="text-3xl font-bold" data-i18n="gallery_title">App 介面預覽</h2>
+            <p class="mt-2 text-gray-400" data-i18n="gallery_subtitle">深色模式介面，保護夜潛後的眼睛</p>
         </div>
         
         <div class="flex overflow-x-auto hide-scrollbar gap-6 px-4 pb-8 justify-start md:justify-center">
@@ -209,8 +215,8 @@
                 <img src="images/authorphoto.png" class="relative w-32 h-32 rounded-full mx-auto border-4 border-brand-teal/50 object-cover shadow-2xl" alt="Author Kuro">
             </div>
 
-            <h2 class="text-3xl font-bold mb-6">來自救援潛水員的承諾</h2>
-            <div class="space-y-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto text-justify md:text-center">
+            <h2 class="text-3xl font-bold mb-6" data-i18n="author_title">來自救援潛水員的承諾</h2>
+            <div class="space-y-4 text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto text-justify md:text-center" data-i18n="author_desc">
                 <p>
                     我是 Kuro，是個業餘的獨立開發者，也是一名熱愛潛水的<strong>資訊安全工作者</strong>。
                 </p>
@@ -223,7 +229,7 @@
             </div>
 
             <div class="mt-12 pt-8 border-t border-gray-700">
-                <p class="text-sm font-bold text-brand-teal uppercase tracking-widest mb-6">Professional Certifications</p>
+                <p class="text-sm font-bold text-brand-teal uppercase tracking-widest mb-6" data-i18n="certs_title">Professional Certifications</p>
                 <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
                     <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">PADI - Rescue Diver</span>
                     <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">SSI - React Right Specialty</span>
@@ -231,17 +237,16 @@
                     <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">SDI - Advanced Scuba Diver</span>
                     <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">ADS - OpenWater Diver</span>
                     <span class="px-4 py-2 bg-gray-800 rounded-full text-xs md:text-sm text-gray-300 border border-gray-600 hover:border-brand-teal transition">ADS - EAN STANDARD DIVER</span>
-                    <span class="px-4 py-2 bg-gray-700 rounded-full text-xs md:text-sm text-gray-400 border border-gray-600">體適能健身C級指導員</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full text-xs md:text-sm text-gray-400 border border-gray-600" data-i18n="cert_fitness">體適能健身C級指導員</span>
                 </div>
             </div>
             
             <div class="mt-12">
                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSfe5ymY_Lm1XcvrTfFVkq0hR_HbitJ_tk1Lwu4hs5gh-zjqwg/viewform" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-brand-teal hover:bg-teal-500 text-white px-8 py-3 rounded-full transition duration-300 shadow-lg shadow-brand-teal/20 font-medium transform hover:-translate-y-1">
                     <i class="fa-regular fa-paper-plane"></i>
-                    聯絡作者 / 意見回饋 / 合作邀請
+                    <span data-i18n="btn_contact">聯絡作者 / 意見回饋 / 合作邀請</span>
                 </a>
 
-                <!-- LINE 社群按鈕（微調外觀） -->
                 <div class="mt-6 flex justify-center gap-4">
                     <a href="https://line.me/ti/g2/A1TxLEAeEguMXQlRlZ5wuL3HsGMl1hia96BDRA" target="_blank" rel="noopener noreferrer" aria-label="加入 LINE 社群" class="w-10 h-10 bg-[#00B900] hover:bg-[#009900] rounded-full flex items-center justify-center transition duration-200 shadow-sm hover:scale-105" title="加入 LINE 社群">
                         <i class="fa-brands fa-line text-white text-lg"></i>
@@ -254,42 +259,42 @@
     <section class="py-20">
         <div class="max-w-5xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-2xl font-bold mb-2">未來展望</h2>
-                <p class="text-gray-500">持續進化，打造最完整的潛水生態</p>
+                <h2 class="text-2xl font-bold mb-2" data-i18n="roadmap_title">未來展望</h2>
+                <p class="text-gray-500" data-i18n="roadmap_subtitle">持續進化，打造最完整的潛水生態</p>
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-map-marked-alt text-brand-teal mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">台灣潛旅規劃</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_1">台灣潛旅規劃</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-briefcase-medical text-brand-pink mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">急救指引</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_2">急救指引</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-book-open text-blue-400 mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">潛水日誌記錄</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_3">潛水日誌記錄</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-globe text-purple-400 mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">國外潛點資訊</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_4">國外潛點資訊</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-mobile-screen-button text-gray-300 mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">版面優化</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_5">版面優化</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-rotate text-green-400 mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">裝置同步</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_6">裝置同步</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-store text-yellow-400 mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">潛店推薦</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_7">潛店推薦</h3>
                 </div>
                 <div class="bg-brand-light p-5 rounded-xl text-center border border-gray-800 hover:border-brand-teal/50 transition">
                     <i class="fa-solid fa-user-graduate text-orange-400 mb-3 text-2xl"></i>
-                    <h3 class="text-sm font-bold text-gray-300">教練推薦</h3>
+                    <h3 class="text-sm font-bold text-gray-300" data-i18n="roadmap_8">教練推薦</h3>
                 </div>
             </div>
         </div>
@@ -301,14 +306,157 @@
                 &copy; 2025 Explore Diving. All rights reserved.
             </div>
             <div class="flex gap-6 text-sm items-center">
-                <a href="privacy.html" class="text-gray-400 hover:text-white">隱私權政策</a>
-                <!-- Footer LINE 社群按鈕 -->
+                <a href="privacy.html" class="text-gray-400 hover:text-white" data-i18n="footer_privacy">隱私權政策</a>
                 <a href="https://line.me/ti/g2/A1TxLEAeEguMXQlRlZ5wuL3HsGMl1hia96BDRA" target="_blank" rel="noopener noreferrer" aria-label="加入 LINE 社群" class="w-8 h-8 bg-[#00B900] hover:bg-[#009900] rounded-full flex items-center justify-center transition duration-200 shadow-sm hover:scale-105">
                     <i class="fa-brands fa-line text-white text-sm"></i>
                 </a>
             </div>
         </div>
     </footer>
+
+    <script>
+        // 翻譯資料庫
+        const translations = {
+            "zh": {
+                "nav_download": "下載 App",
+                "hero_badge": "新手潛水規劃首選、緊急救援小幫手",
+                "hero_title_1": "沒訊號也能",
+                "hero_title_2": "安心探索",
+                "hero_desc": "想去小琉球看海龜？還是去綠島探訪鋼鐵礁？<br><strong>Explore Diving</strong> 收錄全台五大潛區熱門潛點，整合離線地圖與 SOS 急救資訊。不知道去哪潛水？這就是你的最佳口袋嚮導。",
+                "android_title": "Android 版本",
+                "android_status": "開發評估中",
+                "feat_title": "六大核心功能",
+                "feat_subtitle": "解決潛水員最真實的痛點",
+                "feat_1_title": "完整離線資料庫",
+                "feat_1_desc": "內建 30+ 個基本熱門潛點資訊，包含難度分級、地形與特色。無需網路也能查看地圖，離島旅遊不斷線。",
+                "feat_2_title": "即時海況氣象",
+                "feat_2_desc": "即時獲取潛點的「浪高」、「風速」與「氣溫」。出發前掌握第一手環境狀況，潛得更安全。<br><span class=\"text-xs text-gray-500\">(此功能需微量網路)</span>",
+                "feat_3_title": "SOS 緊急醫療資源",
+                "feat_3_desc": "身為救援潛水員，深知安全是回家的路。內建高壓氧中心、海巡電話及 AED 位置圖。緊急時刻一鍵導航撥打。",
+                "feat_4_title": "個人化潛水清單",
+                "feat_4_desc": "地圖圖釘會根據「收藏（粉紅）」、「想去（紫）」、「去過（綠）」變色，輕鬆管理您的潛水足跡。",
+                "feat_5_title": "智慧標籤篩選",
+                "feat_5_desc": "想找 #新手友善 的岸潛？還是挑戰 #強流 船潛？透過篩選器快速找到適合您的潛點。",
+                "feat_6_title": "一鍵導航",
+                "feat_6_desc": "支援連動地圖 App，直接帶您了解潛點所在位置！緊急時刻一鍵導航至 AED 所在位置。",
+                "gallery_title": "App 介面預覽",
+                "gallery_subtitle": "深色模式介面，保護夜潛後的眼睛",
+                "author_title": "來自救援潛水員的承諾",
+                "author_desc": "<p>我是 Kuro，是個業餘的獨立開發者，也是一名熱愛潛水的<strong>資訊安全工作者</strong>。</p><p>有時候會在海邊發現手機沒訊號，或是不知道有哪些潛點好玩、現在海況如何的尷尬狀況，因此我開發了這款 APP。 身為<strong>救援潛水員</strong>，我特別整合了 AED 與高壓氧中心的資訊，因為「安全是回家的路」。</p><p>目前所有潛點資訊皆由我<strong>人工慢慢建置</strong>，開發的費用成本由我個人負擔，雖然進度較慢，但每一筆都希望能幫助到大家，幫助台灣潛水社群更加透明，發展更好。期待大家推廣與給我任何有助於 APP 改進的友善回饋，有任何合作建議也歡迎洽詢！</p>",
+                "certs_title": "Professional Certifications",
+                "cert_fitness": "體適能健身C級指導員",
+                "btn_contact": "聯絡作者 / 意見回饋 / 合作邀請",
+                "roadmap_title": "未來展望",
+                "roadmap_subtitle": "持續進化，打造最完整的潛水生態",
+                "roadmap_1": "台灣潛旅規劃",
+                "roadmap_2": "急救指引",
+                "roadmap_3": "潛水日誌記錄",
+                "roadmap_4": "國外潛點資訊",
+                "roadmap_5": "版面優化",
+                "roadmap_6": "裝置同步",
+                "roadmap_7": "潛店推薦",
+                "roadmap_8": "教練推薦",
+                "footer_privacy": "隱私權政策"
+            },
+            "en": {
+                "nav_download": "Download App",
+                "hero_badge": "Best for Beginners & Emergency Helper",
+                "hero_title_1": "Explore Safely",
+                "hero_title_2": "Even Offline",
+                "hero_desc": "Want to see sea turtles in Xiaoliuqiu? Or visit the Steel Reef in Green Island?<br><strong>Explore Diving</strong> covers Taiwan's top 5 dive areas with offline maps and SOS resources. Your best pocket guide for diving.",
+                "android_title": "Android Version",
+                "android_status": "Under Evaluation",
+                "feat_title": "6 Core Features",
+                "feat_subtitle": "Solving Real Pain Points for Divers",
+                "feat_1_title": "Complete Offline Database",
+                "feat_1_desc": "Built-in 30+ popular dive sites including difficulty, topography, and features. View maps without internet, stay connected even on remote islands.",
+                "feat_2_title": "Real-time Marine Weather",
+                "feat_2_desc": "Get real-time wave height, wind speed, and temperature for specific dive sites. Know the conditions before you go.<br><span class=\"text-xs text-gray-500\">(Requires minimal internet)</span>",
+                "feat_3_title": "SOS Emergency Resources",
+                "feat_3_desc": "As a Rescue Diver, I know safety is the way home. Built-in locations for Hyperbaric Centers, Coast Guard, and AEDs. One-click navigation or dial in emergencies.",
+                "feat_4_title": "Personalized Dive List",
+                "feat_4_desc": "Map pins change color based on 'Favorite' (Pink), 'Wishlist' (Purple), or 'Visited' (Green). Easily manage your diving footprint.",
+                "feat_5_title": "Smart Tag Filtering",
+                "feat_5_desc": "Looking for #BeginnerFriendly shore dives? Or challenging #StrongCurrent boat dives? Quickly find the perfect site with smart filters.",
+                "feat_6_title": "One-Click Navigation",
+                "feat_6_desc": "Connects with Map Apps to guide you directly to dive site entries! One-click navigation to the nearest AED in emergencies.",
+                "gallery_title": "App Preview",
+                "gallery_subtitle": "Dark mode interface, protecting your eyes after night dives",
+                "author_title": "Promise from a Rescue Diver",
+                "author_desc": "<p>I'm Kuro, an amateur indie developer and an <strong>Information Security Professional</strong> who loves diving.</p><p>I built this App because I often faced awkward situations at the beach: no signal, not knowing where to dive, or unknown sea conditions. As a <strong>Rescue Diver</strong>, I integrated AED and Hyperbaric Center info because \"Safety is the way home\".</p><p>I currently <strong>manually build</strong> all dive site data and cover development costs myself. Progress might be slow, but I hope every entry helps make Taiwan's diving community more transparent and better. I welcome any feedback or collaboration opportunities!</p>",
+                "certs_title": "Professional Certifications",
+                "cert_fitness": "Fitness Instructor Level C",
+                "btn_contact": "Contact / Feedback / Collaboration",
+                "roadmap_title": "Future Roadmap",
+                "roadmap_subtitle": "Continuously Evolving the Ecosystem",
+                "roadmap_1": "Trip Planning",
+                "roadmap_2": "First Aid Guide",
+                "roadmap_3": "Dive Logs",
+                "roadmap_4": "Overseas Sites",
+                "roadmap_5": "UI Optimization",
+                "roadmap_6": "Device Sync",
+                "roadmap_7": "Shop Recs",
+                "roadmap_8": "Instructor Recs",
+                "footer_privacy": "Privacy Policy"
+            }
+        };
+
+        let currentLang = 'zh';
+
+        function updateContent() {
+            // 更新所有帶有 data-i18n 的元素
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    // 如果內容包含 HTML 標籤（如 <br>），使用 innerHTML
+                    if (translations[currentLang][key].includes('<')) {
+                        element.innerHTML = translations[currentLang][key];
+                    } else {
+                        element.innerText = translations[currentLang][key];
+                    }
+                }
+            });
+
+            // 更新按鈕文字
+            const btn = document.getElementById('lang-toggle');
+            if(currentLang === 'zh') {
+                btn.innerHTML = '<i class="fa-solid fa-globe mr-1"></i> <span>EN</span>';
+            } else {
+                btn.innerHTML = '<i class="fa-solid fa-globe mr-1"></i> <span>中</span>';
+            }
+            
+            // 更新 html lang 屬性
+            document.documentElement.lang = currentLang === 'zh' ? 'zh-TW' : 'en';
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            localStorage.setItem('explore_diving_lang', currentLang);
+            updateContent();
+        }
+
+        // 初始化
+        function initLanguage() {
+            // 1. 檢查 LocalStorage
+            const savedLang = localStorage.getItem('explore_diving_lang');
+            
+            if (savedLang) {
+                currentLang = savedLang;
+            } else {
+                // 2. 檢查瀏覽器語言
+                const browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang.toLowerCase().startsWith('en')) {
+                    currentLang = 'en';
+                } else {
+                    currentLang = 'zh'; // 預設中文
+                }
+            }
+            updateContent();
+        }
+
+        // 頁面載入後執行
+        document.addEventListener('DOMContentLoaded', initLanguage);
+    </script>
 
 </body>
 </html>
