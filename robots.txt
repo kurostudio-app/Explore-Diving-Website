@@ -1,0 +1,44 @@
+# Explore Diving — explorediving.org
+# 一般搜尋引擎
+User-agent: *
+Allow: /
+
+# === AI 即時引用 bot：強烈建議允許 ===
+# 使用者問問題時即時抓你網站，是引用流量主來源
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# === AI 訓練 bot：App 站建議允許（提升模型對品牌的認知） ===
+# 若日後改為付費內容站，可改為 Disallow: /
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# === Sitemap ===
+Sitemap: https://explorediving.org/sitemap.xml

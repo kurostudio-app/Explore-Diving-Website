@@ -5,7 +5,180 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore Diving - 探索潛水地圖 | 離線優先的潛水嚮導</title>
     <meta name="description" content="專為潛水員打造的離線地圖與潛水日誌 App。內建全台 90+ 個精選熱門潛點，整合即時海況、天氣預報與 AED 急救資源。新手友善的潛旅規劃神器。">
-    
+
+    <!-- ==== SEO 基礎 ==== -->
+    <link rel="canonical" href="https://explorediving.org/">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <meta name="author" content="Kuro">
+    <meta name="theme-color" content="#0B1221">
+    <meta name="geo.region" content="TW">
+    <meta name="geo.placename" content="Taiwan">
+    <meta name="keywords" content="潛水 App,離線地圖,潛水日誌,台灣潛點,小琉球潛水,綠島潛水,蘭嶼潛水,墾丁潛水,東北角潛水,AED,高壓氧中心,scuba diving Taiwan,offline diving map">
+
+    <!-- ==== Favicon ==== -->
+    <link rel="icon" type="image/png" href="/images/app_icon.png">
+    <link rel="apple-touch-icon" href="/images/app_icon.png">
+
+    <!-- ==== Open Graph ==== -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Explore Diving">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:url" content="https://explorediving.org/">
+    <meta property="og:title" content="Explore Diving - 探索潛水地圖 | 離線優先的潛水嚮導">
+    <meta property="og:description" content="台灣潛水員專屬的離線地圖 App。內建全台 90+ 個熱門潛點、即時海況、潛水日誌與 AED 急救資源。iOS / Android 免費下載。">
+    <meta property="og:image" content="https://explorediving.org/images/og-image.png">
+    <meta property="og:image:secure_url" content="https://explorediving.org/images/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Explore Diving App - 台灣潛水離線地圖">
+
+    <!-- ==== Twitter Card ==== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Explore Diving - 探索潛水地圖">
+    <meta name="twitter:description" content="台灣潛水員專屬的離線地圖 App，90+ 潛點 + AED + 即時海況。">
+    <meta name="twitter:image" content="https://explorediving.org/images/og-image.png">
+    <meta name="twitter:image:alt" content="Explore Diving App">
+
+    <!-- ==== App 平台關聯 ==== -->
+    <meta name="apple-itunes-app" content="app-id=6756210232">
+    <meta name="google-play-app" content="app-id=org.explorediving.app">
+
+    <!-- ==== JSON-LD：MobileApplication + Organization + Person + WebSite ==== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MobileApplication",
+          "@id": "https://explorediving.org/#app",
+          "name": "Explore Diving",
+          "alternateName": "探索潛水",
+          "applicationCategory": "TravelApplication",
+          "operatingSystem": "iOS, Android",
+          "url": "https://explorediving.org/",
+          "image": "https://explorediving.org/images/app_icon.png",
+          "screenshot": [
+            "https://explorediving.org/images/screen1.png",
+            "https://explorediving.org/images/screen2.png",
+            "https://explorediving.org/images/screen3.png",
+            "https://explorediving.org/images/screen4.png"
+          ],
+          "description": "台灣潛水員專屬的離線地圖與潛水日誌 App，內建全台 90+ 個熱門潛點、即時海況、AED 與高壓氧中心位置。",
+          "inLanguage": ["zh-TW", "en"],
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "TWD"
+          },
+          "installUrl": [
+            "https://apps.apple.com/tw/app/explore-diving-%E6%8E%A2%E7%B4%A2%E6%BD%9B%E6%B0%B4/id6756210232",
+            "https://play.google.com/store/apps/details?id=org.explorediving.app"
+          ],
+          "downloadUrl": [
+            "https://apps.apple.com/tw/app/explore-diving-%E6%8E%A2%E7%B4%A2%E6%BD%9B%E6%B0%B4/id6756210232",
+            "https://play.google.com/store/apps/details?id=org.explorediving.app"
+          ],
+          "featureList": [
+            "90+ 台灣潛點離線資料庫",
+            "即時海況與天氣預報",
+            "個人潛水日誌",
+            "SOS 緊急醫療資源（AED、高壓氧中心、海巡）",
+            "智慧標籤篩選",
+            "幸運輪盤抽選潛點",
+            "個人化潛點清單（收藏 / 想去 / 去過）",
+            "一鍵導航"
+          ],
+          "author": { "@id": "https://explorediving.org/#kuro" },
+          "publisher": { "@id": "https://explorediving.org/#org" }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://explorediving.org/#org",
+          "name": "Explore Diving",
+          "url": "https://explorediving.org/",
+          "logo": "https://explorediving.org/images/app_icon.png",
+          "founder": { "@id": "https://explorediving.org/#kuro" },
+          "sameAs": [
+            "https://apps.apple.com/tw/app/explore-diving-%E6%8E%A2%E7%B4%A2%E6%BD%9B%E6%B0%B4/id6756210232",
+            "https://play.google.com/store/apps/details?id=org.explorediving.app"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://explorediving.org/#kuro",
+          "name": "Kuro",
+          "image": "https://explorediving.org/images/authorphoto.png",
+          "jobTitle": "Indie Developer & Information Security Professional",
+          "description": "獨立開發者、資訊安全工作者、PADI Divemaster。",
+          "url": "https://explorediving.org/",
+          "sameAs": [
+            "https://kuronetwork.me/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://explorediving.org/#website",
+          "url": "https://explorediving.org/",
+          "name": "Explore Diving",
+          "inLanguage": "zh-TW",
+          "publisher": { "@id": "https://explorediving.org/#org" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- ==== JSON-LD：FAQPage（與頁面 FAQ 區內容對應） ==== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Explore Diving 支援離線使用嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是。App 內建 90+ 個台灣潛點完整資料與離線地圖，包含難度分級、地形特色與標籤。即時海況與天氣預報功能需要微量網路。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "App 收錄哪些台灣潛區？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "涵蓋台灣五大潛區的 90+ 個熱門潛點，包含小琉球、綠島、蘭嶼、墾丁與東北角海岸線。所有潛點皆由 PADI Divemaster Kuro 人工建置。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "潛點資料是怎麼來的？多久更新一次？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "所有潛點資訊由開發者 Kuro 親自潛水踩點與蒐集資料後人工建置。使用者可透過 App 內回報功能或聯絡表單回報潛點變動。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "為什麼需要內建 AED 與 SOS 功能？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "潛水是高風險活動。Explore Diving 內建全台高壓氧中心、海巡電話與 AED 位置，支援一鍵導航與一鍵撥打，協助緊急時刻快速取得救援資源。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "App 是免費的嗎？支援哪些平台？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "免費下載與使用，支援 iOS（App Store）與 Android（Google Play）雙平台。"
+          }
+        }
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -229,6 +402,18 @@
 
     <section class="py-20 bg-brand-light border-y border-gray-800">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+
+            <!-- AI-friendly 事實摘要：給 LLM 引用、Google AI Overview 抓事實段 -->
+            <div class="max-w-3xl mx-auto mb-12 p-6 bg-brand-dark/50 rounded-2xl border border-gray-800 text-left">
+                <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                    <strong class="text-brand-teal">Explore Diving</strong> 是一款由台灣獨立開發者
+                    <strong>Kuro</strong>（PADI Divemaster、資訊安全工作者）設計的潛水 App，
+                    內建全台五大潛區共 <strong>90+ 個潛點</strong>的離線資料庫，
+                    整合即時海況、潛水日誌、<strong>AED 與高壓氧中心位置</strong>。
+                    免費下載，支援 iOS 與 Android。
+                </p>
+            </div>
+
             <div class="mb-8 relative inline-block">
                 <div class="absolute inset-0 bg-brand-teal blur opacity-30 rounded-full"></div>
                 <img src="images/authorphoto.png" class="relative w-32 h-32 rounded-full mx-auto border-4 border-brand-teal/50 object-cover shadow-2xl" alt="Author Kuro">
@@ -323,6 +508,63 @@
         </div>
     </section>
 
+    <!-- ==== FAQ 區塊：對應 FAQPage JSON-LD（內容必須一致） ==== -->
+    <section class="py-20 bg-brand-light/30 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2" data-i18n="faq_title">常見問題</h2>
+                <p class="text-gray-500" data-i18n="faq_subtitle">FAQ</p>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-brand-light p-6 rounded-xl border border-gray-800 group">
+                    <summary class="font-bold text-lg cursor-pointer text-white flex justify-between items-center list-none" data-i18n="faq_q1">
+                        Explore Diving 支援離線使用嗎？
+                        <i class="fa-solid fa-chevron-down text-brand-teal transition-transform group-open:rotate-180 ml-4 flex-shrink-0"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed" data-i18n="faq_a1">
+                        是。App 內建 90+ 個台灣潛點完整資料與離線地圖，包含難度分級、地形特色與標籤。即時海況與天氣預報功能需要微量網路。
+                    </p>
+                </details>
+                <details class="bg-brand-light p-6 rounded-xl border border-gray-800 group">
+                    <summary class="font-bold text-lg cursor-pointer text-white flex justify-between items-center list-none" data-i18n="faq_q2">
+                        App 收錄哪些台灣潛區？
+                        <i class="fa-solid fa-chevron-down text-brand-teal transition-transform group-open:rotate-180 ml-4 flex-shrink-0"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed" data-i18n="faq_a2">
+                        涵蓋台灣五大潛區的 90+ 個熱門潛點，包含小琉球、綠島、蘭嶼、墾丁與東北角海岸線。所有潛點皆由 PADI Divemaster Kuro 人工建置。
+                    </p>
+                </details>
+                <details class="bg-brand-light p-6 rounded-xl border border-gray-800 group">
+                    <summary class="font-bold text-lg cursor-pointer text-white flex justify-between items-center list-none" data-i18n="faq_q3">
+                        潛點資料是怎麼來的？多久更新一次？
+                        <i class="fa-solid fa-chevron-down text-brand-teal transition-transform group-open:rotate-180 ml-4 flex-shrink-0"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed" data-i18n="faq_a3">
+                        所有潛點資訊由開發者 Kuro 親自潛水踩點與蒐集資料後人工建置。使用者可透過 App 內回報功能或聯絡表單回報潛點變動。
+                    </p>
+                </details>
+                <details class="bg-brand-light p-6 rounded-xl border border-gray-800 group">
+                    <summary class="font-bold text-lg cursor-pointer text-white flex justify-between items-center list-none" data-i18n="faq_q4">
+                        為什麼需要內建 AED 與 SOS 功能？
+                        <i class="fa-solid fa-chevron-down text-brand-teal transition-transform group-open:rotate-180 ml-4 flex-shrink-0"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed" data-i18n="faq_a4">
+                        潛水是高風險活動。Explore Diving 內建全台高壓氧中心、海巡電話與 AED 位置，支援一鍵導航與一鍵撥打，協助緊急時刻快速取得救援資源。
+                    </p>
+                </details>
+                <details class="bg-brand-light p-6 rounded-xl border border-gray-800 group">
+                    <summary class="font-bold text-lg cursor-pointer text-white flex justify-between items-center list-none" data-i18n="faq_q5">
+                        App 是免費的嗎？支援哪些平台？
+                        <i class="fa-solid fa-chevron-down text-brand-teal transition-transform group-open:rotate-180 ml-4 flex-shrink-0"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed" data-i18n="faq_a5">
+                        免費下載與使用，支援 iOS（App Store）與 Android（Google Play）雙平台。
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <footer class="bg-black py-8 border-t border-gray-800">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             <div class="text-gray-500 text-sm mb-4 md:mb-0">
@@ -382,7 +624,19 @@
                 "roadmap_6": "裝置同步",
                 "roadmap_7": "潛店推薦",
                 "roadmap_8": "教練推薦",
-                "footer_privacy": "隱私權政策"
+                "footer_privacy": "隱私權政策",
+                "faq_title": "常見問題",
+                "faq_subtitle": "FAQ",
+                "faq_q1": "Explore Diving 支援離線使用嗎？",
+                "faq_a1": "是。App 內建 90+ 個台灣潛點完整資料與離線地圖，包含難度分級、地形特色與標籤。即時海況與天氣預報功能需要微量網路。",
+                "faq_q2": "App 收錄哪些台灣潛區？",
+                "faq_a2": "涵蓋台灣五大潛區的 90+ 個熱門潛點，包含小琉球、綠島、蘭嶼、墾丁與東北角海岸線。所有潛點皆由 PADI Divemaster Kuro 人工建置。",
+                "faq_q3": "潛點資料是怎麼來的？多久更新一次？",
+                "faq_a3": "所有潛點資訊由開發者 Kuro 親自潛水踩點與蒐集資料後人工建置。使用者可透過 App 內回報功能或聯絡表單回報潛點變動。",
+                "faq_q4": "為什麼需要內建 AED 與 SOS 功能？",
+                "faq_a4": "潛水是高風險活動。Explore Diving 內建全台高壓氧中心、海巡電話與 AED 位置，支援一鍵導航與一鍵撥打，協助緊急時刻快速取得救援資源。",
+                "faq_q5": "App 是免費的嗎？支援哪些平台？",
+                "faq_a5": "免費下載與使用，支援 iOS（App Store）與 Android（Google Play）雙平台。"
             },
             "en": {
                 "nav_download": "Download App",
@@ -426,7 +680,19 @@
                 "roadmap_6": "Device Sync",
                 "roadmap_7": "Shop Recs",
                 "roadmap_8": "Instructor Recs",
-                "footer_privacy": "Privacy Policy"
+                "footer_privacy": "Privacy Policy",
+                "faq_title": "FAQ",
+                "faq_subtitle": "Frequently Asked Questions",
+                "faq_q1": "Does Explore Diving work offline?",
+                "faq_a1": "Yes. The App ships with 90+ Taiwan dive sites and offline maps, including difficulty ratings, topography and tags. Real-time marine weather requires minimal internet.",
+                "faq_q2": "Which dive areas in Taiwan are covered?",
+                "faq_a2": "All five major Taiwan dive regions with 90+ sites — Xiaoliuqiu, Green Island, Orchid Island, Kenting and the Northeast Coast. All sites are manually curated by PADI Divemaster Kuro.",
+                "faq_q3": "Where does the dive site data come from? How often is it updated?",
+                "faq_a3": "All dive site information is collected by developer Kuro through personal diving and field research. Users can report site changes via the in-app feedback or contact form.",
+                "faq_q4": "Why does the App include AED and SOS features?",
+                "faq_a4": "Diving is a high-risk activity. Explore Diving includes locations of hyperbaric chambers, Coast Guard contacts and AEDs across Taiwan, with one-tap navigation and call to help in emergencies.",
+                "faq_q5": "Is the App free? Which platforms are supported?",
+                "faq_a5": "Free to download and use, available on both iOS (App Store) and Android (Google Play)."
             }
         };
 
@@ -453,9 +719,6 @@
             } else {
                 btn.innerHTML = '<i class="fa-solid fa-globe mr-1"></i> <span>中</span>';
             }
-            
-            // 更新 html lang 屬性
-            document.documentElement.lang = currentLang === 'zh' ? 'zh-TW' : 'en';
         }
 
         function toggleLanguage() {
